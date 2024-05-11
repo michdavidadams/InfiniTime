@@ -38,8 +38,8 @@ namespace Pinetime {
       enum class PTSWeather : uint8_t { On, Off };
 
       struct PineTimeStyle {
-        Colors ColorTime = Colors::Teal;
-        Colors ColorBar = Colors::Teal;
+        Colors ColorTime = Colors::Blue;
+        Colors ColorBar = Colors::Blue;
         Colors ColorBG = Colors::Black;
         PTSGaugeStyle gaugeStyle = PTSGaugeStyle::Full;
         PTSWeather weatherEnable = PTSWeather::Off;
@@ -290,11 +290,11 @@ namespace Pinetime {
 
       struct SettingsData {
         uint32_t version = settingsVersion;
-        uint32_t stepsGoal = 10000;
+        uint32_t stepsGoal = 5000;
         uint32_t screenTimeOut = 15000;
 
-        ClockType clockType = ClockType::H24;
-        WeatherFormat weatherFormat = WeatherFormat::Metric;
+        ClockType clockType = ClockType::H12;
+        WeatherFormat weatherFormat = WeatherFormat::Imperial;
         Notification notificationStatus = Notification::On;
 
         Pinetime::Applications::WatchFace watchFace = Pinetime::Applications::WatchFace::Digital;
